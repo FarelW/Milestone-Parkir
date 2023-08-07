@@ -1,0 +1,159 @@
+.reservation-box {
+  margin-top: 150px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reservation-title{
+  text-align: center;
+}
+
+.Description {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.Description img {
+  width: 100%;
+}
+
+.desc-left {
+  width: 160px;
+  height: 120px;
+}
+
+.desc-right{
+  width: 180px;
+}
+
+.description-title{
+  color: #2A2D31;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+p{
+  color: #50555C;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Reservation {
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.arrival-title{
+  margin-top: 50px;
+  color: #4B4B4B;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reservation-time {
+  margin: 5px;
+}
+
+.Details {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  bottom: 50px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.details-attribute {
+  margin-top: 100px;
+}
+
+.Details div p{
+  color: #50555C;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Details div p b{
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.radio {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__label {
+  padding: 8px 14px;
+  font-size: 14px;
+  color: black;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.radio__label:not(:last-of-type) {
+  border-right: 1px solid #e50e0e;
+}
+
+.radio__input:checked + .radio__label {
+  color: white;
+  background: #e50e0e;
+}
+
+
+.book-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 50px;
+  border-radius: 20px;
+  background: #FF2A2A;
+  border: none;
+  color: #F6F6F6;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+}
+
+.book-button:hover {
+  box-shadow: 0px 4px 4px 0px rgba(255, 0, 0, 0.25);
+}

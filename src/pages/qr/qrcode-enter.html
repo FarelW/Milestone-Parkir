@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>qrcode-enter</title>
+
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <a href="prev-page.html"> 
+      <button class="back-button">&larr;</button>
+    </a>
+
+    <div class="white-box">
+      <a href="qrcode-exit.html">
+        <center><div id="qrcode" class="qrcode-img"></div></center>
+      </a>
+      <center><p class="scan">Scan your QR</p></center>
+    </div>
+  </div>
+
+  <script>
+    var qrcode = new QRCode("qrcode", {
+		text: "https://www.youtube.com/watch?v=CtxY4q0Ujiw",
+		width: 128,
+		height: 128,
+		colorDark: "#000000",
+		colorLight: "#ffffff",
+	});
+  </script>
+
+</body>
+</html>

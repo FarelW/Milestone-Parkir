@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>qrcode-exit</title>
+
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <a href="prev-page.html"> 
+      <button class="back-button">&larr;</button>
+    </a>
+
+    <div class="white-box">
+      <center><div id="qrcode" class="qrcode-img"></div></center>
+      <center><p class="scan">Scan your QR before you leave</p></center>
+      <div class="bar"></div>
+      <p><strong>Receipt</strong></p>
+      <div class="receipt-child">
+        <p class="receipt-left-1">Total hrs</p>
+        <p class="receipt-right-1">5hrs</p>
+      </div>
+      <div class="receipt-child">
+        <p class="receipt-left-2">Charge per hrs</p>
+        <p class="receipt-right-2">Rp 2.000 (flat)</p>
+      </div>
+
+      <div class="bar"></div>
+      <div class="receipt-child">
+        <p><strong>Total</strong></p>
+        <p>Rp 2.000</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var qrcode = new QRCode("qrcode", {
+		text: "https://www.youtube.com/watch?v=CtxY4q0Ujiw",
+		width: 128,
+		height: 128,
+		colorDark: "#000000",
+		colorLight: "#ffffff",
+	});
+  </script>
+
+</body>
+</html>

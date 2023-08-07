@@ -1,0 +1,70 @@
+.book-button {
+    height: 100px;
+    width: 200px;
+    font-size: 50px;
+}
+
+
+body {
+    background-color: red;
+}
+
+.container {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.back-button {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 100px;
+}
+
+.white-box {
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 10px;
+    padding-top: 40px;
+    margin-top: 10px;
+    height: 700px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.scan {
+    font-size:20px;
+    font-weight:bold;
+}
+
+.bar {
+    background-color: gray;
+    height: 5px;
+    border-radius: 5px;
+    opacity: 0.5;
+}
+
+.receipt-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.receipt-left-1, .receipt-right-1{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.receipt-right-1, .receipt-right-2{
+    opacity: 0.5;
+}
+
+.receipt-left-2, .receipt-right-2{
+    margin-top: 0px;
+    margin-bottom: 16px;
+}  

@@ -1,0 +1,178 @@
+.android-large {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    }
+    .android-large .div {
+    background-color: #ffffff;
+    border: 1px none;
+    height: 1920px;
+    position: relative;
+    width: 1080px;
+    }
+    .android-large .text-wrapper {
+    color: #000000;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 60px;
+    font-weight: 500;
+    left: 493px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 1206px;
+    }
+    .android-large .group {
+    height: 54px;
+    left: 225px;
+    position: absolute;
+    top: 1519px;
+    width: 630px;
+    }
+    .android-large .text-wrapper-2 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    }
+    .android-large .text-wrapper-3 {
+    color: #f79515;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    left: 521px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    }
+    .android-large .h-1 {
+    color: #000000;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 90px;
+    font-weight: 700;
+    left: 346px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 290px;
+    }
+    .android-large .text-wrapper-4 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 54px;
+    font-weight: 400;
+    left: 195px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 434px;
+    }
+    .android-large .by-signing-up-you {
+    color: transparent;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    left: 195px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 922px;
+    width: 723px;
+    }
+    .android-large .span {
+    color: #000000;
+    }
+    .android-large .text-wrapper-5 {
+    color: #f79515;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    }
+    .android-large .text-wrapper-6 {
+    color: #f79515;
+    }
+    .android-large .account-link {
+    height: 40px;
+    left: 292px;
+    position: absolute;
+    top: 1359px;
+    width: 495px;
+    }
+    .android-large .input-box {
+    height: 386px;
+    left: 198px;
+    position: absolute;
+    top: 536px;
+    width: 683px;
+    }
+    .android-large .enter-email-or-phone-wrapper {
+    border: 1px solid;
+    border-color: #8b8b8b;
+    border-radius: 10px;
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 683px;
+    }
+    .android-large .enter-email-or-phone {
+    background-color: transparent;
+    border: 0;
+    color: #8b8b8b;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    height: 18px;
+    left: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 0;
+    position: relative;
+    top: 20px;
+    width: 480px;
+    }
+    .android-large .input-wrapper {
+    border: 1px solid;
+    border-color: #8b8b8b;
+    border-radius: 10px;
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 105px;
+    width: 683px;
+    }
+    .android-large .component-2 {
+    border: 1px solid;
+    border-color: #8b8b8b;
+    border-radius: 10px;
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 210px;
+    width: 683px;
+    }
+    .android-large .component-3 {
+    border: 1px solid;
+    border-color: #8b8b8b;
+    border-radius: 10px;
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 315px;
+    width: 683px;
+    }
+    .android-large .component-5 {
+    height: 100px !important;
+    left: 124px !important;
+    position: absolute !important;
+    top: 1073px !important;
+    width: 840px !important;
+    }
