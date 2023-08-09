@@ -5,9 +5,17 @@ import NavBar from './../../components/navbar/NavBar';
 import Reservation from "../reservation/Reservation";
 import {useNavigate,useLocation} from 'react-router-dom';
 
-const Home = () =>{
+const Home = ({userdata}) =>{
     const location = useLocation();
     const { username } = location.state || {}
+
+    let status
+
+    for(let i=0;i<userdata.length;i++){
+        if (username===userdata[i].username){
+          status=userdata[i].status
+        }
+    }
 
     const [Park,setPark]=useState([])
     const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +33,12 @@ const Home = () =>{
     const Card = () =>{
         const navigate = useNavigate()
         const getClickData = (park) => {
-            navigate('/reservation', { state: { parkData: park } });
+            console.log(status)
+            if (Object.keys(status).length === 0) {
+                navigate('/reservation', { state: { parkData: park, username: username }});
+            } else {
+                alert("Can't book another ticket")
+            }
           };
 
         return Park.map((park)=>{
@@ -56,7 +69,7 @@ const Home = () =>{
 
     return(
         <div>
-            <NavBar/>
+            <NavBar username={username}/>
             <div className="profilebox">
                 <div className="profile-img"><img className="profile"/></div>
                 <div><input className="search" type="text" placeholder="Search"></input></div>
