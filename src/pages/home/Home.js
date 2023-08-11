@@ -5,24 +5,26 @@ import NavBar from './../../components/navbar/NavBar';
 import Reservation from "../reservation/Reservation";
 import {useNavigate,useLocation} from 'react-router-dom';
 
-const Home = ({userdata}) =>{
+const Home = ({userdata,park}) =>{
     const location = useLocation();
     const { username } = location.state || {}
 
-    const [Park,setPark]=useState([])
+    // const [Park,setPark]=useState([])
     const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        fetch('https://parkir-api.vercel.app/data/park')
-            .then(response => response.json())
-            .then(data => {
-                setPark(data)
-                setIsLoading(false)
-            })
-            .catch(error => console.error(error));
-    }, [Park]);
+    // useEffect(() => {
+    //     fetch('https://parkir-api.vercel.app/data/park')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setPark(data)
+    //             setIsLoading(false)
+    //         })
+    //         .catch(error => console.error(error));
+    // }, [Park]);
 
     if (username){
-        if (userdata!==undefined){
+        console.log(userdata)
+        if (userdata!==undefined && park!==undefined){
+            
             let status
             for(let i=0;i<userdata.length;i++){
                 if (username===userdata[i].username){
@@ -40,7 +42,7 @@ const Home = ({userdata}) =>{
                     }
                 };
 
-            return Park.map((park)=>{
+            return park.map((park)=>{
                 return(
                     <div className="content-card" key={park.id} onClick={() => getClickData(park)}>
                         <label className="content-label">{park.name}</label>
@@ -76,7 +78,7 @@ const Home = ({userdata}) =>{
                 <div className="home-content">
                     <Card/>
                 </div>
-                {isLoading && (<Loading/>)}
+                {/* {isLoading && (<Loading/>)} */}
             </div>
         )
         }

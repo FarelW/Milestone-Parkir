@@ -56,7 +56,7 @@ const Routess = () => {
                 <Route path="/logout" element={<Logout userdata={userdata}/>} />
                 <Route path="/reservation" element={<Reservation userdata={userdata}/>} />
                 <Route path="/admin" element={<Admin />} />
-                <Route path="/home" element={<Home userdata={userdata}/>} />
+                <Route path="/home" element={<Home userdata={userdata} park={parkdata}/>} />
                 <Route path="/ticket" element={<Ticket userdata={userdata} park={parkdata}/>} />
                 <Route path="/succesful" element={<Succesful />} />
                 <Route path="/succesful1" element={<CancelSuccesful />} />
