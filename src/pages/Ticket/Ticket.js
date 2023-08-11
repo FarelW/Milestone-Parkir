@@ -21,7 +21,7 @@ function Ticket({userdata,park}) {
             const user = userdata.find(user => user.username === username)
             ischecked(user.status.checked)
         }
-      }, [userdata]);
+      }, []);
 
     if (username){
         if (userdata && park){
