@@ -7,7 +7,7 @@ import axios from "axios";
 import {useNavigate} from 'react-router-dom';
 import Verification from "./../../components/loading/Verification"
 
-function Register(userdata) {
+function Register({userdata}) {
     const [name,setName]=useState('')
     const [username,setUsername]=useState('')
     const [phone,setPhone]=useState('')
