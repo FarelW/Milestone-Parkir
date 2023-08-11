@@ -44,10 +44,8 @@ function Reservation({userdata}) {
         }
       }
 
-      console.log(updatedData,id_now)
-
       updateData(updatedData,"https://parkir-api.vercel.app/data/user",id_now)
-      setIsLoading(true) 
+      setIsLoading(true)
     }
     function checkState() {
       if ((document.getElementById('myRadio1').checked)||(document.getElementById('myRadio2').checked)||(document.getElementById('myRadio2').checked)

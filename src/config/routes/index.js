@@ -8,9 +8,13 @@ import Register from "./../../pages/Register/Register"
 import Logout from "../../pages/Logout/Logout"
 import Succesful from "../../components/succesful/succesful"
 import Ticket from "../../pages/Ticket/Ticket";
+import Checkin from "../../components/succesful/checkinsuccesful"
+import Checkout from "../../components/succesful/checkoutsuccesful"
+import CancelSuccesful from "../../components/succesful/cancelsuccesful"
 
 const Routess = () => {
     const [userdata,setuserdata]=useState()
+    const [parkdata,setparkdata]=useState()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,6 +22,22 @@ const Routess = () => {
             const response = await fetch('https://parkir-api.vercel.app/data/user');
             const jsonData = await response.json();
             setuserdata(jsonData);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+        fetchData();
+        const interval = setInterval(fetchData, 1000);
+        return () => clearInterval(interval);
+      }, []);
+
+      
+      useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('https://parkir-api.vercel.app/data/park');
+            const jsonData = await response.json();
+            setparkdata(jsonData);
           } catch (error) {
             console.error('Error fetching data:', error);
           }
@@ -37,8 +57,11 @@ const Routess = () => {
                 <Route path="/reservation" element={<Reservation userdata={userdata}/>} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/home" element={<Home userdata={userdata}/>} />
-                <Route path="/ticket" element={<Ticket userdata={userdata}/>} />
+                <Route path="/ticket" element={<Ticket userdata={userdata} park={parkdata}/>} />
                 <Route path="/succesful" element={<Succesful />} />
+                <Route path="/succesful1" element={<CancelSuccesful />} />
+                <Route path="/succesful2" element={<Checkin />} />
+                <Route path="/succesful3" element={<Checkout />} />
             </Routes>
         </Router>
     )

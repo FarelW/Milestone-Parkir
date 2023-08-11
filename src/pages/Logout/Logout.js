@@ -14,7 +14,7 @@ function Login() {
             </div>
             <div className='button-logout'>
                 <div>
-                    <button type="submit" className='submit-logout' onClick={()=>navigate("/")}>Logout</button>
+                    <button type="submit" className='submit-logout' onClick={()=>navigate("/login")}>Logout</button>
                 </div>
                 <div>
                     <button type="submit" className='cancel-button'onClick={()=>navigate(-1)}>Cancel</button>

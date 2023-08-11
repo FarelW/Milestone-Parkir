@@ -9,14 +9,6 @@ const Home = ({userdata}) =>{
     const location = useLocation();
     const { username } = location.state || {}
 
-    let status
-
-    for(let i=0;i<userdata.length;i++){
-        if (username===userdata[i].username){
-          status=userdata[i].status
-        }
-    }
-
     const [Park,setPark]=useState([])
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
@@ -27,60 +19,76 @@ const Home = ({userdata}) =>{
                 setIsLoading(false)
             })
             .catch(error => console.error(error));
-    }, []);
+    }, [Park]);
 
     if (username){
-    const Card = () =>{
-        const navigate = useNavigate()
-        const getClickData = (park) => {
-            console.log(status)
-            if (Object.keys(status).length === 0) {
-                navigate('/reservation', { state: { parkData: park, username: username }});
-            } else {
-                alert("Can't book another ticket")
+        if (userdata!==undefined){
+            let status
+            for(let i=0;i<userdata.length;i++){
+                if (username===userdata[i].username){
+                status=userdata[i].status
+                }
             }
-          };
 
-        return Park.map((park)=>{
-            return(
-                <div className="content-card" key={park.id} onClick={() => getClickData(park)}>
-                    <label className="content-label">{park.name}</label>
-                    <div className="content-box" style={{backgroundColor: crowd(park.car,park.bike)}}>
-                        <div><img className="content-img" src={park.url_img}/></div>
-                        <div className="info">Car<div className="info-value">{park.car}</div></div>
-                        <div className="info">Bike<div className="info-value">{park.bike}</div></div>
+            const Card = () =>{
+                const navigate = useNavigate()
+                const getClickData = (park) => {
+                    if (Object.keys(status).length === 0) {
+                        navigate('/reservation', { state: { parkData: park, username: username }});
+                    } else {
+                        alert("Can't book another ticket")
+                    }
+                };
+
+            return Park.map((park)=>{
+                return(
+                    <div className="content-card" key={park.id} onClick={() => getClickData(park)}>
+                        <label className="content-label">{park.name}</label>
+                        <div className="content-box" style={{backgroundColor: crowd(park.car,park.bike)}}>
+                            <div><img className="content-img" src={park.url_img}/></div>
+                            <div className="info">Car<div className="info-value">{park.car}</div></div>
+                            <div className="info">Bike<div className="info-value">{park.bike}</div></div>
+                        </div>
                     </div>
-                </div>
-            )
-        })
-    }
-
-    function crowd(car,bike){
-        if (car>50 || bike>50){
-            return "#00D22E"
+                )
+            })
         }
-        else if ((car<=50 && car>10) || (bike<=50 && bike>10)){
-            return "#F5DC00"
+
+        function crowd(car,bike){
+            if (car>50 || bike>50){
+                return "#00D22E"
+            }
+            else if ((car<=50 && car>10) || (bike<=50 && bike>10)){
+                return "#F5DC00"
+            }
+            else{
+                return "#F50000"
+            }
+        }
+
+        return(
+            <div>
+                <NavBar username={username}/>
+                <div className="profilebox">
+                    <div className="profile-img"><img className="profile"/></div>
+                    <div><input className="search" type="text" placeholder="Search"></input></div>
+                </div>
+                <div className="home-content">
+                    <Card/>
+                </div>
+                {isLoading && (<Loading/>)}
+            </div>
+        )
         }
         else{
-            return "#F50000"
+            return(
+                <div>
+                    <NavBar username={username}/>
+                    {isLoading && (<Loading/>)}
+                </div>
+            )
+            
         }
-    }
-
-    return(
-        <div>
-            <NavBar username={username}/>
-            <div className="profilebox">
-                <div className="profile-img"><img className="profile"/></div>
-                <div><input className="search" type="text" placeholder="Search"></input></div>
-            </div>
-            <div className="home-content">
-                <Card/>
-            </div>
-            {isLoading && (<Loading/>)}
-            {/* <Reservation Park={Park}/> */}
-        </div>
-    )
     }
     else{
         window.location.href="/login"

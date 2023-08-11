@@ -21,9 +21,9 @@ function Succesful() {
                 </div>
                 <div class="check-shadow"></div>
             </div>
-            <div className='succesful-title'>Payment Succesful</div>
-            <div className='succesful-label'>Check Your Ticket on MyTicket menu</div>
-            <button className='redirect-button' onClick={()=>navigate('/home',{ state: {username: username }})}>Go to My Ticket</button>
+            <div className='succesful-title'>Check in Succesful</div>
+            <div className='succesful-label'>You get the access to parking place</div>
+            <button className='redirect-button' onClick={()=>navigate('/ticket',{ state: {username: username }})}>Go to My Ticket</button>
         </div>
     );
 }

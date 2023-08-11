@@ -1,0 +1,84 @@
+.ticket-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    line-height: normal;
+}
+
+.ticket-tes{
+    margin-top: 50px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ticket-title{
+    margin-top: 100px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.ticket-img{
+    width: 230px;
+}
+
+.ticket-desc{
+    font-size: 15px;
+    font-weight: 500;
+    text-align:justify;
+}
+
+.ticket-info{
+    margin-top: 20px;
+    background-color: aqua;
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.ticket-checkin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ticket-button{
+    margin-top: 30px;
+    width: 130px;
+    height: 60px;
+    border-radius: 20px;
+    background: #FF2A2A;
+    border: none;
+    color: #F6F6F6;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cancel{
+    color: #FF2A2A;
+    background: #F6F6F6;
+    border: 3px solid #FF2A2A
+}
+
+.no-ticket{
+    text-align: center;
+    margin-top: 70%;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.ticket-button:hover{
+    box-shadow: 0px 4px 4px 0px rgba(255, 0, 0, 0.25);
+}

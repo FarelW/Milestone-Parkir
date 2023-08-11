@@ -1,7 +1,7 @@
 import './Navbar.css';
 import { useState } from 'react';
 import homepic from "./../../assets/Home.svg"
-import settingspic from "./../../assets/Vector.svg"
+import settingspic from "./../../assets/logout.svg"
 import tutorialpic from "./../../assets/menu.svg"
 import helppic from "./../../assets/Help.svg"
 import {useNavigate,useLocation} from 'react-router-dom';
@@ -24,7 +24,7 @@ const Navbar = ({username}) =>{
             </div>
             <div className='nav' onClick={()=>navigate("/logout")}>
                 <div className='setting'><img src={settingspic}/></div>
-                <div className='text'>Settings</div>
+                <div className='text'>Logout</div>
             </div>
         </div>
     )
